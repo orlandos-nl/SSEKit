@@ -1,6 +1,8 @@
 import NIOCore
 
 public struct SSEStream: AsyncSequence {
+    public typealias Element = ServerSentEvent
+    
     public struct AsyncIterator: AsyncIteratorProtocol {
         public typealias Element = ServerSentEvent
         private var bufferedEvents = [ServerSentEvent]()
