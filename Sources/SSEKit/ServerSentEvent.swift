@@ -19,7 +19,7 @@ public struct ServerSentEvent: Equatable, Sendable {
         self.id = id
     }
 
-    internal func makeBuffer(allocator: ByteBufferAllocator) -> ByteBuffer {
+    public func makeBuffer(allocator: ByteBufferAllocator) -> ByteBuffer {
         var string = ""
 
         if let type = type {
